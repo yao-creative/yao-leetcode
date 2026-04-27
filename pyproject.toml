@@ -1,0 +1,16 @@
+[project]
+name = "yao-leetcode"
+version = "0.1.0"
+description = "LeetCode notebooks and SQL exercises"
+requires-python = ">=3.11"
+dependencies = [
+  "jupyterlab>=4.2.0",
+  "ipykernel>=6.29.0",
+  "ipython-sql>=0.5.0",
+  "sqlalchemy>=2.0.0",
+  "duckdb>=1.1.0",
+  "duckdb-engine>=0.15.0",
+]
+
+[tool.uv]
+package = false
