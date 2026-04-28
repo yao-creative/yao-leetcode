@@ -7,6 +7,7 @@ dependencies = [
   "jupyterlab>=4.2.0",
   "ipykernel>=6.29.0",
   "ipython-sql>=0.5.0",
+  "prettytable<3.11",
   "sqlalchemy>=2.0.0",
   "duckdb>=1.1.0",
   "duckdb-engine>=0.15.0",

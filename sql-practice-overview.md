@@ -197,5 +197,124 @@ If you want, I can simulate a **real Solve-style SQL interview prompt** where:
 
 That’s the closest thing to your actual final round.
 
+---
 
+# 10. Broad-coverage-first strategy (fast before interview)
+
+If your goal is to see **every major SQL type quickly**, use this 2-pass approach:
+
+## Pass 1 (coverage pass, 1-2 days)
+
+Do 1-2 questions per pattern. Timebox each to 25-35 minutes.
+
+1. Basic SELECT/filtering
+- Recyclable and Low Fat Products
+- Big Countries
+
+2. JOINs (inner/left/self)
+- Combine Two Tables
+- Employees Earning More Than Their Managers
+
+3. Anti-join / missing records
+- Customers Who Never Order
+- Customer Who Visited but Did Not Make Any Transactions
+
+4. GROUP BY + HAVING
+- Duplicate Emails
+- Managers with at Least 5 Direct Reports
+
+5. CASE WHEN business logic
+- Not Boring Movies
+- Immediate Food Delivery I
+
+6. Window ranking
+- Rank Scores
+- Department Top Three Salaries
+
+7. Window lag/lead + sequence
+- Consecutive Numbers
+- Human Traffic of Stadium
+
+8. CTE multi-step
+- Trips and Users
+- Find Median Given Frequency of Numbers
+
+9. Time-series/product analytics
+- Monthly Transactions I
+- Restaurant Growth
+
+10. Subquery/function style
+- Nth Highest Salary
+- Second Highest Salary
+
+## Pass 2 (interview simulation pass, 1 day)
+
+Redo only these 8 without notes, and narrate your thinking aloud:
+
+- Customers Who Never Order
+- Employees Earning More Than Their Managers
+- Duplicate Emails
+- Rank Scores
+- Department Top Three Salaries
+- Consecutive Numbers
+- Human Traffic of Stadium
+- Monthly Transactions I
+
+## What “strategic” means here
+
+- Breadth first: cover all SQL patterns once before deep repetition.
+- Pattern tagging: after each problem, write its pattern label (join/group/window/cte/time).
+- Error log: keep one line per mistake (wrong grain, duplicate joins, bad partition, bad date filter).
+- Repetition only on weak patterns: don’t re-do easy joins if your misses are in windows/CTEs.
+
+---
+
+# 11. Rush-order tips (when time is very short)
+
+Use this flow on every question to move fast without losing correctness:
+
+1. Read for output grain first (10-20 seconds)
+- Ask: “1 row should represent what?”
+- Most SQL mistakes come from wrong grain, not syntax.
+
+2. Classify the pattern immediately (10 seconds)
+- join / anti-join / group / window / cte / time-series
+- Pick the template mentally before writing SQL.
+
+3. Write SELECT + FROM skeleton first
+- Add only columns needed in final output.
+- Don’t optimize early; get shape first.
+
+4. Add filters before complex logic
+- `WHERE` early reduces noise and mistakes.
+- For aggregates, remember `HAVING` vs `WHERE`.
+
+5. For ranking/top-N, default to window functions
+- Start with `ROW_NUMBER()` unless ties are explicitly needed.
+- Switch to `RANK()`/`DENSE_RANK()` only when required.
+
+6. For multi-step logic, use CTEs early
+- One transformation per CTE.
+- Name CTEs by intent (`daily_sales`, `ranked_orders`, etc.).
+
+7. Do a 30-second sanity check before submit
+- Any accidental duplicate rows from joins?
+- Null handling correct?
+- Date boundary correct (`>=`, `<=`, inclusive month)?
+
+8. If stuck >3 minutes, force a fallback
+- Solve 80% case first with simpler query.
+- Then add edge-case handling.
+
+## Rush execution order (when cramming)
+
+1. Do all Pass 1 questions once (breadth)
+2. Redo only wrong ones immediately
+3. Do Pass 2 simulation set aloud
+4. Final 60-90 min: windows + time-series only
+
+## Interview-day rule
+
+- Prefer a clear, explainable query over a clever short one.
+- Say your assumptions out loud before coding.
 

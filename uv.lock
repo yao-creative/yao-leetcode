@@ -1131,14 +1131,14 @@ wheels = [
 
 [[package]]
 name = "prettytable"
-version = "3.17.0"
+version = "3.10.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "wcwidth" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/79/45/b0847d88d6cfeb4413566738c8bbf1e1995fad3d42515327ff32cc1eb578/prettytable-3.17.0.tar.gz", hash = "sha256:59f2590776527f3c9e8cf9fe7b66dd215837cca96a9c39567414cbc632e8ddb0", size = 67892 }
+sdist = { url = "https://files.pythonhosted.org/packages/4c/90/e1c8c06235d53c3adaae74d295669612beea5f5a2052b3184a763e7bdd62/prettytable-3.10.2.tar.gz", hash = "sha256:29ec6c34260191d42cd4928c28d56adec360ac2b1208a26c7e4f14b90cc8bc84", size = 56415 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ee/8c/83087ebc47ab0396ce092363001fa37c17153119ee282700c0713a195853/prettytable-3.17.0-py3-none-any.whl", hash = "sha256:aad69b294ddbe3e1f95ef8886a060ed1666a0b83018bbf56295f6f226c43d287", size = 34433 },
+    { url = "https://files.pythonhosted.org/packages/c5/16/ec5cc65437dce97d2814a7ba31842b0ee958d102f6e99e264c35f15c328f/prettytable-3.10.2-py3-none-any.whl", hash = "sha256:1cbfdeb4bcc73976a778a0fb33cb6d752e75396f16574dcb3e2d6332fd93c76a", size = 28320 },
 ]
 
 [[package]]
@@ -1796,6 +1796,7 @@ dependencies = [
     { name = "ipykernel" },
     { name = "ipython-sql" },
     { name = "jupyterlab" },
+    { name = "prettytable" },
     { name = "sqlalchemy" },
 ]
 
@@ -1806,5 +1807,6 @@ requires-dist = [
     { name = "ipykernel", specifier = ">=6.29.0" },
     { name = "ipython-sql", specifier = ">=0.5.0" },
     { name = "jupyterlab", specifier = ">=4.2.0" },
+    { name = "prettytable", specifier = "<3.11" },
     { name = "sqlalchemy", specifier = ">=2.0.0" },
 ]
