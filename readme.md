@@ -2,7 +2,7 @@
 
 ## Engineering Daybook: April 6th
 
-I realized that never preparing and formally applying to be software engineer, my data structures and algorithms has been an unknown unknown and a gap in my knowledge.
+I realized that never preparing and formally applying to be software engineer, my data structures and algorithms has been an filled with gaps unknown-unknown. I've done algorithms in undergraduate but not data structures as much in a rigorous sense.
 
 Going through a list of questions to Prep for Interview. Also asking ChatGPT of the practical implications of these questions. 
 
