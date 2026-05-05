@@ -4,7 +4,7 @@
 
 I realized that never preparing and formally applying to be software engineer, my data structures and algorithms has been an filled with gaps unknown-unknown. I've done algorithms in undergraduate but not data structures as much in a rigorous sense.
 
-Going through a list of questions to Prep for Interview. Also asking ChatGPT of the practical implications of these questions. 
+Going through a list of questions to Prep for Interview. Also asking Codex of the practical implications of these questions. 
 
 Probably will challenge the way I look at problems. 
 
