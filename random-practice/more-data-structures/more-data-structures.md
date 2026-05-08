@@ -66,3 +66,88 @@
 - Starts with easier hash/stack/queue fundamentals.
 - Spreads practice across hashing, linked lists, ring buffers, randomized sets, and multi-structure system design.
 - Avoids problems already present in `Done`, `Todo`, and `random-practice/data-structures`.
+
+## What Each New Notebook Trains
+
+- `49-design-hashset.ipynb`
+  Trains: bucket indexing, collisions, membership checks, insert/remove invariants.
+  Think with: hash buckets, direct addressing vs chaining, load distribution.
+  Applications: dedup sets, fast access-control membership checks, seen-item filters.
+- `50-design-hashmap.ipynb`
+  Trains: key-value storage, overwrite semantics, deletion from collision chains.
+  Think with: mapping identity to state, update-in-place behavior, collision resolution.
+  Applications: caches, config maps, counters, object registries.
+- `51-implement-queue-using-stacks.ipynb`
+  Trains: amortized analysis and reversing access order.
+  Think with: “one structure can simulate another if I delay work.”
+  Applications: buffering, task pipelines, inbox/outbox queue patterns.
+- `52-implement-stack-using-queues.ipynb`
+  Trains: interface emulation and operation tradeoffs.
+  Think with: “what operation do I want cheap, and what can I afford to pay for?”
+  Applications: adapter layers, constrained APIs, wrapping limited primitives.
+- `53-design-linked-list.ipynb`
+  Trains: pointer rewiring, sentinel nodes, index traversal edge cases.
+  Think with: local pointer updates instead of array shifting.
+  Applications: eviction lists, undo chains, intrusive lists, playlist/editor cursors.
+- `54-design-circular-queue.ipynb`
+  Trains: ring buffers, modulo indexing, full-vs-empty state tracking.
+  Think with: fixed-capacity streaming storage.
+  Applications: telemetry buffers, producer-consumer queues, packet/audio buffers.
+- `55-design-circular-deque.ipynb`
+  Trains: constant-time insertion and removal at both ends.
+  Think with: symmetric front/back operations under bounded capacity.
+  Applications: schedulers, sliding windows, browser/history style structures.
+- `56-insert-delete-getrandom-o1.ipynb`
+  Trains: hash map + array composition, swap-with-last deletion.
+  Think with: “I need both fast lookup and fast random access.”
+  Applications: randomized load distribution, sampling active items, game/entity pools.
+- `57-design-twitter.ipynb`
+  Trains: combining maps, sets, timestamps, and top-k retrieval.
+  Think with: merging many small sorted sources instead of globally sorting everything.
+  Applications: social feeds, notification aggregation, event timelines.
+
+## Notebook Order
+
+1. `49-design-hashset.ipynb` — Design HashSet
+2. `50-design-hashmap.ipynb` — Design HashMap
+3. `51-implement-queue-using-stacks.ipynb` — Implement Queue using Stacks
+4. `52-implement-stack-using-queues.ipynb` — Implement Stack using Queues
+5. `53-design-linked-list.ipynb` — Design Linked List
+6. `54-design-circular-queue.ipynb` — Design Circular Queue
+7. `55-design-circular-deque.ipynb` — Design Circular Deque
+8. `56-insert-delete-getrandom-o1.ipynb` — Insert Delete GetRandom O(1)
+9. `57-design-twitter.ipynb` — Design Twitter
+10. `58-group-anagrams.ipynb` — Group Anagrams
+11. `59-largest-rectangle-in-histogram.ipynb` — Largest Rectangle in Histogram
+12. `60-simplify-path.ipynb` — Simplify Path
+13. `61-online-stock-span.ipynb` — Online Stock Span
+14. `62-number-of-recent-calls.ipynb` — Number of Recent Calls
+15. `63-reverse-nodes-in-k-group.ipynb` — Reverse Nodes in k-Group
+16. `64-flatten-a-multilevel-doubly-linked-list.ipynb` — Flatten a Multilevel Doubly Linked List
+17. `65-design-add-and-search-words-data-structure.ipynb` — Design Add and Search Words Data Structure
+18. `66-replace-words.ipynb` — Replace Words
+19. `67-map-sum-pairs.ipynb` — Map Sum Pairs
+
+## How To Think About Picking The Next Exercise
+
+- If you keep missing constant-time lookup opportunities, pick a hashing problem.
+- If you keep rescanning left/right neighbors, pick a stack or deque problem.
+- If edge-case bugs happen during insert/delete, pick a linked-list design problem.
+- If you need top-k or “most recent / smallest / largest so far”, pick a heap problem.
+- If the problem keeps asking for prefixes or word matching, pick a trie problem.
+- If the problem mixes operations and state transitions, prefer design problems over pure algorithm drills.
+
+## Real-System Pattern Map
+
+- Hash maps / hash sets
+  Shows up in caches, indexes, registries, dedup pipelines, and rate-limit state.
+- Linked lists
+  Shows up when order changes frequently and local rewiring is cheaper than shifting arrays.
+- Queues / deques / circular buffers
+  Shows up in streaming systems, schedulers, networking buffers, and rolling windows.
+- Heaps
+  Shows up in ranking, task prioritization, top-k analytics, and feed assembly.
+- Tries
+  Shows up in autocomplete, routing/prefix matching, dictionaries, and search suggestions.
+- Composite structures
+  Shows up in real interview design questions because production systems usually need two or more structures at once.
