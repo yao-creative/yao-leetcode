@@ -127,16 +127,17 @@
 17. `65-design-add-and-search-words-data-structure.ipynb` — Design Add and Search Words Data Structure
 18. `66-replace-words.ipynb` — Replace Words
 19. `67-map-sum-pairs.ipynb` — Map Sum Pairs
-20. `68-top-k-frequent-elements.ipynb` — Top K Frequent Elements
+20. `68-task-scheduler.ipynb` — Task Scheduler
 21. `69-sort-characters-by-frequency.ipynb` — Sort Characters By Frequency
 22. `70-maximum-gap.ipynb` — Maximum Gap
 23. `71-contains-duplicate-iii.ipynb` — Contains Duplicate III
 24. `72-reduce-array-size-to-the-half.ipynb` — Reduce Array Size to The Half
+25. `75-task-scheduler-ii.ipynb` — Task Scheduler II
 
 ## Bucket Sort Focus (New)
 
-- `68-top-k-frequent-elements.ipynb`
-  Why bucket-sort relevant: count frequencies, then collect from highest frequency bucket down.
+- `68-task-scheduler.ipynb`
+  Why schedule relevant: greedy counting and cooldown-slot reasoning to minimize total intervals.
 - `69-sort-characters-by-frequency.ipynb`
   Why bucket-sort relevant: frequency buckets over characters, then rebuild string from high to low counts.
 - `70-maximum-gap.ipynb`
@@ -145,6 +146,8 @@
   Why bucket-sort relevant: value buckets plus sliding window can check near-duplicates in linear time.
 - `72-reduce-array-size-to-the-half.ipynb`
   Why bucket-sort relevant: bucket frequencies-of-frequencies to greedily remove largest groups first.
+- `75-task-scheduler-ii.ipynb`
+  Why schedule relevant: hash map of last execution day plus simulation-by-jump for cooldown gaps.
 
 ## How To Think About Picking The Next Exercise
 
