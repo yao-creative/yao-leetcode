@@ -115,19 +115,19 @@
 5. `53-design-linked-list.ipynb` — Design Linked List
 6. `54-design-circular-queue.ipynb` — Design Circular Queue
 7. `55-design-circular-deque.ipynb` — Design Circular Deque
-8. `56-insert-delete-getrandom-o1.ipynb` — Insert Delete GetRandom O(1)
-9. `57-design-twitter.ipynb` — Design Twitter
-10. `58-group-anagrams.ipynb` — Group Anagrams
-11. `59-largest-rectangle-in-histogram.ipynb` — Largest Rectangle in Histogram
+8. `56-insert-delete-getrandom-o1.ipynb` — Insert Delete GetRandom O(1) `[#neetcode-150]`
+9. `57-design-twitter.ipynb` — Design Twitter `[#neetcode-150]`
+10. `58-group-anagrams.ipynb` — Group Anagrams `[#neetcode-150]`
+11. `59-largest-rectangle-in-histogram.ipynb` — Largest Rectangle in Histogram `[#neetcode-150]`
 12. `60-simplify-path.ipynb` — Simplify Path
 13. `61-online-stock-span.ipynb` — Online Stock Span
 14. `62-number-of-recent-calls.ipynb` — Number of Recent Calls
-15. `63-reverse-nodes-in-k-group.ipynb` — Reverse Nodes in k-Group
+15. `63-reverse-nodes-in-k-group.ipynb` — Reverse Nodes in k-Group `[#neetcode-150]`
 16. `64-flatten-a-multilevel-doubly-linked-list.ipynb` — Flatten a Multilevel Doubly Linked List
-17. `65-design-add-and-search-words-data-structure.ipynb` — Design Add and Search Words Data Structure
+17. `65-design-add-and-search-words-data-structure.ipynb` — Design Add and Search Words Data Structure `[#neetcode-150]`
 18. `66-replace-words.ipynb` — Replace Words
 19. `67-map-sum-pairs.ipynb` — Map Sum Pairs
-20. `68-task-scheduler.ipynb` — Task Scheduler
+20. `68-task-scheduler.ipynb` — Task Scheduler `[#neetcode-150]`
 21. `69-sort-characters-by-frequency.ipynb` — Sort Characters By Frequency
 22. `70-maximum-gap.ipynb` — Maximum Gap
 23. `71-contains-duplicate-iii.ipynb` — Contains Duplicate III
