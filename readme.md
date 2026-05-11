@@ -1,6 +1,6 @@
 # NeetCode 150 
 
-## Engineering Daybook: April 6th
+## Engineering Daybook: April 8-th
 
 I realized that never preparing and formally applying to be software engineer, my data structures and algorithms has been an filled with gaps unknown-unknown. I've done algorithms in undergraduate and some data structures. However there are still gaps with application and industry.
 
