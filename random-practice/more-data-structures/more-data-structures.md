@@ -108,9 +108,9 @@
 
 ## Notebook Order
 
-1. `49-design-hashset.ipynb` — Design HashSet
-2. `50-design-hashmap.ipynb` — Design HashMap
-3. `51-implement-queue-using-stacks.ipynb` — Implement Queue using Stacks
+1. `49-design-hashset.ipynb` — Design HashSet DONE
+2. `50-design-hashmap.ipynb` — Design HashMap DONE
+3. `51-implement-queue-using-stacks.ipynb` — Implement Queue using Stacks DONE
 4. `52-implement-stack-using-queues.ipynb` — Implement Stack using Queues
 5. `53-design-linked-list.ipynb` — Design Linked List
 6. `54-design-circular-queue.ipynb` — Design Circular Queue
