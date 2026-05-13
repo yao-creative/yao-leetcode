@@ -117,7 +117,7 @@
 7. `55-design-circular-deque.ipynb` — Design Circular Deque
 8. `56-insert-delete-getrandom-o1.ipynb` — Insert Delete GetRandom O(1) `[#neetcode-150]` DONE
 9. `57-design-twitter.ipynb` — Design Twitter `[#neetcode-150]` DONE
-10. `58-group-anagrams.ipynb` — Group Anagrams `[#neetcode-150]`
+10. `58-group-anagrams.ipynb` — Group Anagrams `[#neetcode-150]` DONE
 11. `59-largest-rectangle-in-histogram.ipynb` — Largest Rectangle in Histogram `[#neetcode-150]`
 12. `60-simplify-path.ipynb` — Simplify Path
 13. `61-online-stock-span.ipynb` — Online Stock Span
