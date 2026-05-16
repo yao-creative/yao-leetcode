@@ -26,6 +26,8 @@
 - Maximum Subarray
 - Top K Frequent Elements
 - Jump Game II
+- Course Schedule
+- Course Schedule II
 
 ### random-practice/data-structures
 - Valid Sudoku
@@ -127,12 +129,14 @@
 17. `65-design-add-and-search-words-data-structure.ipynb` — Design Add and Search Words Data Structure `[#neetcode-150]`
 18. `66-replace-words.ipynb` — Replace Words
 19. `67-map-sum-pairs.ipynb` — Map Sum Pairs
-20. `68-task-scheduler.ipynb` — Task Scheduler `[#neetcode-150]`
+20. `68-task-scheduler.ipynb` — Task Scheduler `[#neetcode-150]` DONE
 21. `69-sort-characters-by-frequency.ipynb` — Sort Characters By Frequency
 22. `70-maximum-gap.ipynb` — Maximum Gap
 23. `71-contains-duplicate-iii.ipynb` — Contains Duplicate III
 24. `72-reduce-array-size-to-the-half.ipynb` — Reduce Array Size to The Half
 25. `75-task-scheduler-ii.ipynb` — Task Scheduler II
+26. `76-course-schedule.ipynb` — Course Schedule `[#neetcode-150]`
+27. `77-course-schedule-ii.ipynb` — Course Schedule II `[#neetcode-150]`
 
 ## Bucket Sort Focus (New)
 
