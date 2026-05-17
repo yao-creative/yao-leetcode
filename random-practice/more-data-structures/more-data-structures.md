@@ -28,6 +28,16 @@
 - Jump Game II
 - Course Schedule
 - Course Schedule II
+- Skip list focus:
+  `1206-design-skiplist.ipynb` — Design Skiplist
+  `3072-distribute-elements-into-two-arrays-ii.ipynb` — Distribute Elements Into Two Arrays II
+  `2426-number-of-pairs-satisfying-inequality.ipynb` — Number of Pairs Satisfying Inequality
+  `315-count-of-smaller-numbers-after-self.ipynb` — Count of Smaller Numbers After Self
+- Intrusive linked-list focus:
+  `146-lru-cache.ipynb` — LRU Cache
+  `460-lfu-cache.ipynb` — LFU Cache
+  `25-reverse-nodes-in-k-group.ipynb` — Reverse Nodes in k-Group
+  `430-flatten-a-multilevel-doubly-linked-list.ipynb` — Flatten a Multilevel Doubly Linked List
 
 ### random-practice/data-structures
 - Valid Sudoku
