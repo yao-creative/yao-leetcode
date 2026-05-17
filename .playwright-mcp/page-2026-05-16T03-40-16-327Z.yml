@@ -1,0 +1,460 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "logo" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e8]
+        - generic [ref=e9]:
+          - link "Product" [ref=e10] [cursor=pointer]:
+            - /url: /product
+          - link "Pricing" [ref=e11] [cursor=pointer]:
+            - /url: /pricing
+          - link "Blog" [ref=e12] [cursor=pointer]:
+            - /url: /blog/overview
+          - link "Forum NEW" [ref=e13] [cursor=pointer]:
+            - /url: /forum
+            - generic [ref=e14]: Forum
+            - generic [ref=e15]: NEW
+          - link "Referral" [ref=e16] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e17]
+            - generic [ref=e19]: Referral
+        - generic [ref=e21]:
+          - button "Log In" [ref=e22] [cursor=pointer]
+          - button "Join for free" [ref=e24] [cursor=pointer]:
+            - generic [ref=e25]: Join for free
+    - main [ref=e27]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - button [ref=e32] [cursor=pointer]:
+            - img [ref=e34]
+          - button [ref=e36] [cursor=pointer]:
+            - img [ref=e38]
+          - generic [ref=e40]:
+            - img [ref=e43]
+            - button "1" [ref=e47] [cursor=pointer]:
+              - generic [ref=e48]: "1"
+        - generic [ref=e51]:
+          - generic [ref=e53]:
+            - radiogroup "segmented control" [ref=e55]:
+              - generic [ref=e56]:
+                - generic [ref=e57] [cursor=pointer]:
+                  - radio "Description" [checked]
+                  - generic [ref=e59]:
+                    - img [ref=e60]
+                    - generic [ref=e62]: Description
+                - generic [ref=e63] [cursor=pointer]:
+                  - radio "Solution"
+                  - generic [ref=e65]:
+                    - img [ref=e66]
+                    - generic [ref=e68]: Solution
+                - generic [ref=e69] [cursor=pointer]:
+                  - radio "Discussion"
+                  - generic [ref=e71]:
+                    - img [ref=e72]
+                    - generic [ref=e74]: Discussion
+                - generic [ref=e75] [cursor=pointer]:
+                  - radio "Submissions"
+                  - generic [ref=e77]:
+                    - img [ref=e78]
+                    - generic [ref=e80]: Submissions
+                - generic [ref=e81] [cursor=pointer]:
+                  - radio "Ask AI"
+                  - generic [ref=e83]:
+                    - img [ref=e84]
+                    - generic [ref=e87]: Ask AI
+            - generic [ref=e89]:
+              - generic [ref=e92]:
+                - heading "Concurrent Web Crawler" [level=1] [ref=e94]
+                - generic [ref=e95]:
+                  - generic [ref=e96]:
+                    - generic [ref=e97]: Medium
+                    - generic [ref=e99]:
+                      - generic [ref=e100]: Concurrency
+                      - generic [ref=e101]: Graph
+                  - img [ref=e104]
+                - generic [ref=e107]:
+                  - generic [ref=e108]:
+                    - generic [ref=e109]: Interview Stages
+                    - generic [ref=e111]: Screening
+                  - generic [ref=e112]:
+                    - generic [ref=e113]: Frequency
+                    - progressbar [ref=e114]
+                  - generic [ref=e118]:
+                    - generic [ref=e119]: Asked By
+                    - generic "Anthropic" [ref=e121]:
+                      - img "ANTHROPIC-icon" [ref=e123]
+                  - generic [ref=e124]:
+                    - generic [ref=e125]:
+                      - text: Last Reported
+                      - img "question-circle" [ref=e126]:
+                        - img [ref=e127]
+                    - generic [ref=e130]: 1 months ago
+              - generic [ref=e131]:
+                - generic [ref=e132]:
+                  - paragraph [ref=e133]:
+                    - emphasis [ref=e134]:
+                      - text: (This question is a variation of the LeetCode question
+                      - link "1242. Web Crawler Multithreaded" [ref=e135] [cursor=pointer]:
+                        - /url: https://leetcode.com/problems/web-crawler-multithreaded/description/
+                      - text: . If you haven't completed that question yet, it is recommended to solve it first.)
+                  - paragraph [ref=e136]:
+                    - text: Given a URL
+                    - code [ref=e137]: startUrl
+                    - text: and an interface
+                    - code [ref=e138]: htmlParser
+                    - text: ", implement a concurrent web crawler to discover and return all"
+                    - strong [ref=e139]: unique
+                    - text: URLs that have the
+                    - strong [ref=e140]: exact same hostname
+                    - text: as
+                    - code [ref=e141]: startUrl
+                    - text: .
+                  - paragraph [ref=e142]: "The crawler must follow the rules below:"
+                  - list [ref=e143]:
+                    - listitem [ref=e144]:
+                      - strong [ref=e145]: "Starting Point:"
+                      - text: Begin crawling from
+                      - code [ref=e146]: startUrl
+                      - text: .
+                    - listitem [ref=e147]:
+                      - strong [ref=e148]: "Same Hostname:"
+                      - text: Only record and further crawl URLs whose hostname is
+                      - strong [ref=e149]: exactly identical
+                      - text: to the hostname of
+                      - code [ref=e150]: startUrl
+                      - text: .
+                  - paragraph [ref=e151]:
+                    - text: All URLs use the
+                    - code [ref=e152]: http
+                    - text: protocol without a port number. The hostname is defined as the substring between
+                    - code [ref=e153]: "\"://\""
+                    - text: and the next
+                    - code [ref=e154]: "'/'"
+                    - text: (or the end of the string if no further
+                    - code [ref=e155]: "'/'"
+                    - text: exists).
+                  - list [ref=e156]:
+                    - listitem [ref=e157]:
+                      - strong [ref=e158]: "URL Uniqueness:"
+                      - text: Before checking uniqueness,
+                      - strong [ref=e159]: remove the fragment part
+                      - text: (everything after and including
+                      - code [ref=e160]: "'#'"
+                      - text: ). Two URLs are considered the same if they match after this sanitization step.
+                      - list [ref=e161]:
+                        - listitem [ref=e162]:
+                          - text: "For example:"
+                          - code [ref=e163]: "\"http://example.com/page#section1\""
+                          - text: and
+                          - code [ref=e164]: "\"http://example.com/page\""
+                          - text: should both be treated as
+                          - code [ref=e165]: "\"http://example.com/page\""
+                          - text: for uniqueness checking and for subsequent crawling.
+                    - listitem [ref=e166]:
+                      - strong [ref=e167]: "No Duplicate Visits:"
+                      - text: A sanitized URL must
+                      - strong [ref=e168]: not
+                      - text: be crawled or added more than once.
+                    - listitem [ref=e169]:
+                      - strong [ref=e170]: "Fragment Sanitization Order:"
+                      - text: Fragment removal occurs
+                      - strong [ref=e171]: before
+                      - text: hostname comparison and before deduplication.
+                    - listitem [ref=e172]:
+                      - strong [ref=e173]: "Graph Characteristics:"
+                      - text: The hyperlink graph may contain cycles, and pages may reference previously visited pages.
+                  - paragraph [ref=e174]:
+                    - text: You are provided with the implementation of
+                    - code [ref=e175]: HtmlParser
+                    - text: ":"
+                  - code [ref=e177]:
+                    - generic [ref=e178]: /*
+                    - generic [ref=e179]: "* Provided Html Parser implementation. You should NOT modify it."
+                    - generic [ref=e180]: "*/"
+                    - generic [ref=e181]: "class HtmlParser {"
+                    - generic [ref=e182]: // Returns all raw URLs from the webpage of the given URL.
+                    - generic [ref=e183]:
+                      - text: List
+                      - generic [ref=e184]: <String>
+                      - text: "getUrls(String url){...}"
+                    - generic [ref=e185]: "}"
+                  - paragraph [ref=e186]:
+                    - text: Each call to
+                    - code [ref=e187]: getUrls
+                    - text: is subject to a certain latency to simulate the real-world network conditions, so your solution must use
+                    - strong [ref=e188]: concurrency
+                    - text: to fetch multiple pages in parallel.
+                  - paragraph [ref=e189]:
+                    - text: For testing purposes, you will be given three variables
+                    - code [ref=e190]: urls
+                    - text: ","
+                    - code [ref=e191]: edges
+                    - text: and
+                    - code [ref=e192]: startUrl
+                    - text: to describe the underlying hyperlink graph. Only
+                    - code [ref=e193]: startUrl
+                    - text: is accessible in your code;
+                    - code [ref=e194]: urls
+                    - text: and
+                    - code [ref=e195]: edges
+                    - text: are
+                    - strong [ref=e196]: not
+                    - text: directly available.
+                  - paragraph [ref=e197]: Return all discovered URLs (after sanitization) in any order.
+                  - paragraph [ref=e198]:
+                    - strong [ref=e199]: "Constraints:"
+                  - list [ref=e200]:
+                    - listitem [ref=e201]:
+                      - text: All URLs use the
+                      - code [ref=e202]: http
+                      - text: protocol and do not contain a port number.
+                    - listitem [ref=e203]:
+                      - text: 1 ≤
+                      - code [ref=e204]: urls.length
+                      - text: ≤ 1000,
+                    - listitem [ref=e205]:
+                      - text: 1 ≤
+                      - code [ref=e206]: edges.length
+                      - text: ≤ 1000
+                    - listitem [ref=e207]:
+                      - text: Each
+                      - code [ref=e208]: getUrls
+                      - text: call will return in ≤ 15 ms.
+                  - paragraph [ref=e209]:
+                    - strong [ref=e210]: "Example 1:"
+                  - blockquote [ref=e211]:
+                    - paragraph [ref=e212]:
+                      - strong [ref=e213]: "Input:"
+                      - text: urls = ["
+                      - link "http://example.com/page1" [ref=e214] [cursor=pointer]:
+                        - /url: http://example.com/page1
+                      - text: "\", \""
+                      - link "http://example.com/page2" [ref=e215] [cursor=pointer]:
+                        - /url: http://example.com/page2
+                      - text: "\", \""
+                      - link "http://example.com/page3#sectionA" [ref=e216] [cursor=pointer]:
+                        - /url: http://example.com/page3#sectionA
+                      - text: "\", \""
+                      - link "http://example.net/page4#" [ref=e217] [cursor=pointer]:
+                        - /url: http://example.net/page4#
+                      - text: "\"], edges = [[0, 1], [0, 2], [1, 3], [2, 0]], startUrl = \""
+                      - link "http://example.com/page1" [ref=e218] [cursor=pointer]:
+                        - /url: http://example.com/page1
+                      - text: "\""
+                    - paragraph [ref=e219]:
+                      - strong [ref=e220]: "Output:"
+                      - text: "[\""
+                      - link "http://example.com/page1" [ref=e221] [cursor=pointer]:
+                        - /url: http://example.com/page1
+                      - text: "\", \""
+                      - link "http://example.com/page2" [ref=e222] [cursor=pointer]:
+                        - /url: http://example.com/page2
+                      - text: "\", \""
+                      - link "http://example.com/page3" [ref=e223] [cursor=pointer]:
+                        - /url: http://example.com/page3
+                      - text: "\"]"
+                    - paragraph [ref=e224]:
+                      - strong [ref=e225]: "Explanation:"
+                    - list [ref=e226]:
+                      - listitem [ref=e227]: All three reachable pages share the hostname "example.com".
+                      - listitem [ref=e228]:
+                        - text: The URL "
+                        - link "http://example.com/page3#sectionA" [ref=e229] [cursor=pointer]:
+                          - /url: http://example.com/page3#sectionA
+                        - text: "\" is sanitized to \""
+                        - link "http://example.com/page3" [ref=e230] [cursor=pointer]:
+                          - /url: http://example.com/page3
+                        - text: "\"."
+                      - listitem [ref=e231]:
+                        - text: The page "
+                        - link "http://example.net/page4#" [ref=e232] [cursor=pointer]:
+                          - /url: http://example.net/page4#
+                        - text: "\" is ignored due to a different hostname."
+                  - paragraph [ref=e233]:
+                    - strong [ref=e234]: "Example 2:"
+                  - blockquote [ref=e235]:
+                    - paragraph [ref=e236]:
+                      - strong [ref=e237]: "Input:"
+                      - text: urls = ["
+                      - link "http://news.yahoo.com/home" [ref=e238] [cursor=pointer]:
+                        - /url: http://news.yahoo.com/home
+                      - text: "\", \""
+                      - link "http://news.google.com/top" [ref=e239] [cursor=pointer]:
+                        - /url: http://news.google.com/top
+                      - text: "\", \""
+                      - link "http://news.yahoo.com/news" [ref=e240] [cursor=pointer]:
+                        - /url: http://news.yahoo.com/news
+                      - text: "\"], edges = [[1, 0], [0, 2]], startUrl = \""
+                      - link "http://news.google.com/top" [ref=e241] [cursor=pointer]:
+                        - /url: http://news.google.com/top
+                      - text: "\""
+                    - paragraph [ref=e242]:
+                      - strong [ref=e243]: "Output:"
+                      - text: "[\""
+                      - link "http://news.google.com/top" [ref=e244] [cursor=pointer]:
+                        - /url: http://news.google.com/top
+                      - text: "\"]"
+                  - paragraph [ref=e245]:
+                    - strong [ref=e246]: "Example 3:"
+                  - blockquote [ref=e247]:
+                    - paragraph [ref=e248]:
+                      - strong [ref=e249]: "Input:"
+                      - text: urls = ["
+                      - link "http://site.com/a" [ref=e250] [cursor=pointer]:
+                        - /url: http://site.com/a
+                      - text: "\", \""
+                      - link "http://site.com/b#frag1" [ref=e251] [cursor=pointer]:
+                        - /url: http://site.com/b#frag1
+                      - text: "\", \""
+                      - link "http://site.com/b#frag2" [ref=e252] [cursor=pointer]:
+                        - /url: http://site.com/b#frag2
+                      - text: "\", \""
+                      - link "http://site.com/c" [ref=e253] [cursor=pointer]:
+                        - /url: http://site.com/c
+                      - text: "\", \""
+                      - link "http://other.com/x" [ref=e254] [cursor=pointer]:
+                        - /url: http://other.com/x
+                      - text: "\", \""
+                      - link "http://site.com/d" [ref=e255] [cursor=pointer]:
+                        - /url: http://site.com/d
+                      - text: "\", \""
+                      - link "http://site.com/e#" [ref=e256] [cursor=pointer]:
+                        - /url: http://site.com/e#
+                      - text: "\", \""
+                      - link "http://site.com/f" [ref=e257] [cursor=pointer]:
+                        - /url: http://site.com/f
+                      - text: "\"], edges = [[0, 1], [0, 2], [1, 3], [2, 3], [3, 4], [3, 5], [5, 0], [5, 6], [6, 7], [7, 0]], startUrl = \""
+                      - link "http://site.com/a" [ref=e258] [cursor=pointer]:
+                        - /url: http://site.com/a
+                      - text: "\""
+                    - paragraph [ref=e259]:
+                      - strong [ref=e260]: "Output:"
+                      - text: "[\""
+                      - link "http://site.com/a" [ref=e261] [cursor=pointer]:
+                        - /url: http://site.com/a
+                      - text: "\", \""
+                      - link "http://site.com/b" [ref=e262] [cursor=pointer]:
+                        - /url: http://site.com/b
+                      - text: "\", \""
+                      - link "http://site.com/c" [ref=e263] [cursor=pointer]:
+                        - /url: http://site.com/c
+                      - text: "\", \""
+                      - link "http://site.com/d" [ref=e264] [cursor=pointer]:
+                        - /url: http://site.com/d
+                      - text: "\", \""
+                      - link "http://site.com/e" [ref=e265] [cursor=pointer]:
+                        - /url: http://site.com/e
+                      - text: "\", \""
+                      - link "http://site.com/f" [ref=e266] [cursor=pointer]:
+                        - /url: http://site.com/f
+                      - text: "\"]"
+                - separator [ref=e267]
+                - generic [ref=e268]:
+                  - button "Report" [ref=e269] [cursor=pointer]:
+                    - generic [ref=e270]: Report
+                  - generic [ref=e271]: Report seen similar question in interview
+                - separator [ref=e272]
+                - generic [ref=e273]:
+                  - generic [ref=e274]:
+                    - generic [ref=e275]: Accepted
+                    - generic [ref=e276]:
+                      - generic [ref=e277]: 4k
+                      - generic [ref=e278]: /7.1k
+                  - generic [ref=e280]:
+                    - generic [ref=e281]: Acceptance Rate
+                    - generic [ref=e282]: 55.5%
+            - generic [ref=e283]:
+              - generic [ref=e284]:
+                - button "String Tokenization" [ref=e285] [cursor=pointer]:
+                  - img [ref=e287]
+                  - generic [ref=e289]: String Tokenization
+                - button "Design Note-Taking System" [ref=e291] [cursor=pointer]:
+                  - img [ref=e293]
+                  - generic [ref=e295]: Design Note-Taking System
+              - generic [ref=e297]:
+                - link "Login" [ref=e298] [cursor=pointer]:
+                  - /url: /login
+                - text: to save progress
+          - separator
+          - generic [ref=e302]:
+            - generic [ref=e304]:
+              - generic [ref=e305]:
+                - generic [ref=e306]:
+                  - generic [ref=e307] [cursor=pointer]:
+                    - generic [ref=e308]:
+                      - generic "Python3" [ref=e309]
+                      - combobox [ref=e310]
+                    - img "down" [ref=e312]:
+                      - img [ref=e313]
+                  - button "Auto" [ref=e315] [cursor=pointer]:
+                    - img [ref=e316]
+                    - generic [ref=e318]: Auto
+                - generic [ref=e319]:
+                  - button "undo" [ref=e320] [cursor=pointer]:
+                    - img "undo" [ref=e322]:
+                      - img [ref=e323]
+                  - button "sun" [ref=e326] [cursor=pointer]:
+                    - img "sun" [ref=e328]:
+                      - img [ref=e329]
+              - code [ref=e334]:
+                - generic [ref=e335]:
+                  - textbox "Editor content" [ref=e336]
+                  - generic [ref=e339]:
+                    - generic [ref=e342]: "1"
+                    - generic [ref=e344]: "2"
+                    - generic [ref=e346]: "3"
+                    - generic [ref=e348]: "4"
+                    - generic [ref=e350]: "5"
+                    - generic [ref=e352]: "6"
+                    - generic [ref=e354]: "7"
+                    - generic [ref=e356]: "8"
+                    - generic [ref=e358]: "9"
+                    - generic [ref=e359]:
+                      - generic [ref=e360] [cursor=pointer]: 
+                      - generic [ref=e361]: "10"
+                    - generic [ref=e362]:
+                      - generic [ref=e363] [cursor=pointer]: 
+                      - generic [ref=e364]: "11"
+                    - generic [ref=e366]: "12"
+                    - generic [ref=e367]:
+                      - generic [ref=e368] [cursor=pointer]: 
+                      - generic [ref=e369]: "13"
+                    - generic [ref=e371]: "14"
+                    - generic [ref=e373]: "15"
+                  - generic [ref=e401]:
+                    - generic [ref=e403]: import time
+                    - generic [ref=e405]: import threading
+                    - generic [ref=e407]: from concurrent.futures import ThreadPoolExecutor
+                    - generic [ref=e409]: import os
+                    - generic [ref=e411]: from collections import defaultdict
+                    - generic [ref=e414]: "\"\"\""
+                    - generic [ref=e416]: Provided Html Parser implementation. You should NOT modify it.
+                    - generic [ref=e418]: "\"\"\""
+                    - generic [ref=e420]: "class HtmlParser:"
+                    - generic [ref=e422]: "def __init__(self, urls, edges):"
+                    - generic [ref=e424]: "self.graph = {}"
+                    - generic [ref=e426]: "for u in urls:"
+                    - generic [ref=e428]: self.graph[u] = []
+              - generic [ref=e432]:
+                - button [ref=e433] [cursor=pointer]:
+                  - img [ref=e435]
+                - generic [ref=e437]:
+                  - button "Debug" [ref=e438] [cursor=pointer]:
+                    - img [ref=e440]
+                    - generic [ref=e442]: Debug
+                  - button "Run" [ref=e443] [cursor=pointer]:
+                    - img [ref=e445]
+                    - generic [ref=e447]: Run
+                  - button "Submit" [ref=e448] [cursor=pointer]:
+                    - img [ref=e450]
+                    - generic [ref=e452]: Submit
+            - separator
+            - generic [ref=e456]:
+              - generic [ref=e457]: Stdout
+              - generic [ref=e458]: "-"
+  - alert [ref=e459]
+  - generic [ref=e460]:
+    - alert
+    - alert

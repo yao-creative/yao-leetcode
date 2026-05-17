@@ -1,0 +1,140 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "logo" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "logo" [ref=e8]
+      - generic [ref=e9]:
+        - link "Product" [ref=e10] [cursor=pointer]:
+          - /url: /product
+        - link "Pricing" [ref=e11] [cursor=pointer]:
+          - /url: /pricing
+        - link "Blog" [ref=e12] [cursor=pointer]:
+          - /url: /blog/overview
+        - link "Forum NEW" [ref=e13] [cursor=pointer]:
+          - /url: /forum
+          - generic [ref=e14]: Forum
+          - generic [ref=e15]: NEW
+        - link "Referral" [ref=e16] [cursor=pointer]:
+          - /url: /profile
+          - img [ref=e17]
+          - generic [ref=e19]: Referral
+  - main [ref=e21]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - button [ref=e26]:
+          - img [ref=e28]
+        - button [ref=e30]:
+          - img [ref=e32]
+        - img [ref=e37]
+      - generic [ref=e41]:
+        - generic [ref=e43]:
+          - radiogroup "segmented control" [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]:
+                - radio "Description" [checked] [ref=e48]
+                - generic [ref=e50]:
+                  - img [ref=e51]
+                  - generic [ref=e53]: Description
+              - generic [ref=e54]:
+                - radio "Solution" [ref=e55]
+                - generic [ref=e57]:
+                  - img [ref=e58]
+                  - generic [ref=e60]: Solution
+              - generic [ref=e61]:
+                - radio "Discussion" [ref=e62]
+                - generic [ref=e64]:
+                  - img [ref=e65]
+                  - generic [ref=e67]: Discussion
+              - generic [ref=e68]:
+                - radio "Submissions" [ref=e69]
+                - generic [ref=e71]:
+                  - img [ref=e72]
+                  - generic [ref=e74]: Submissions
+              - generic [ref=e75]:
+                - radio "Ask AI" [ref=e76]
+                - generic [ref=e78]:
+                  - img [ref=e79]
+                  - generic [ref=e82]: Ask AI
+          - generic [ref=e84]:
+            - generic [ref=e87]:
+              - generic [ref=e89]:
+                - heading [level=3]
+                - list [ref=e90]:
+                  - listitem [ref=e91]
+                  - listitem [ref=e92]
+                  - listitem [ref=e93]
+              - generic [ref=e96]:
+                - heading [level=3]
+                - list [ref=e97]:
+                  - listitem [ref=e98]
+                  - listitem [ref=e99]
+                  - listitem [ref=e100]
+            - generic [ref=e101]:
+              - separator
+              - generic [ref=e102]:
+                - button "Report" [ref=e103]
+                - generic [ref=e104]: Report seen similar question in interview
+              - separator
+              - generic [ref=e105]:
+                - generic [ref=e106]:
+                  - generic [ref=e107]: Accepted
+                  - generic [ref=e108]:
+                    - generic [ref=e109]: 2.6k
+                    - generic [ref=e110]: /4.9k
+                - generic [ref=e112]:
+                  - generic [ref=e113]: Acceptance Rate
+                  - generic [ref=e114]: 52.0%
+          - generic [ref=e116]:
+            - button [disabled] [ref=e117]:
+              - img [ref=e119]
+            - button [disabled] [ref=e122]:
+              - img [ref=e124]
+        - separator
+        - generic [ref=e128]:
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]:
+                - generic [ref=e133]:
+                  - generic [ref=e134]:
+                    - generic "Python3" [ref=e135]
+                    - combobox [ref=e136]
+                  - img "down" [ref=e138]:
+                    - img [ref=e139]
+                - button "Auto" [ref=e141]:
+                  - img [ref=e142]
+                  - generic [ref=e144]: Auto
+              - generic [ref=e145]:
+                - button "undo" [ref=e146]:
+                  - img "undo" [ref=e148]:
+                    - img [ref=e149]
+                - button "sun" [ref=e152]:
+                  - img "sun" [ref=e154]:
+                    - img [ref=e155]
+            - generic [ref=e158]:
+              - button [ref=e159]:
+                - img [ref=e161]
+              - generic [ref=e163]:
+                - button "Debug" [ref=e164]:
+                  - img [ref=e166]
+                  - text: Debug
+                - button "Run" [ref=e168]:
+                  - img [ref=e170]
+                  - text: Run
+                - button "Submit" [ref=e172]:
+                  - img [ref=e174]
+                  - text: Submit
+          - separator
+          - generic [ref=e178]:
+            - generic [ref=e179]: Test Cases
+            - button "plus" [ref=e181]:
+              - img "plus" [ref=e183]:
+                - img [ref=e184]
+            - generic [ref=e187]:
+              - generic [ref=e188]: Input
+              - generic [ref=e189]:
+                - generic [ref=e191]: data =
+                - generic [ref=e194]: forbiddenWords =
+                - generic [ref=e197]: ignoreWords =
+              - generic [ref=e199]: Output
+              - generic [ref=e201]: Expected
