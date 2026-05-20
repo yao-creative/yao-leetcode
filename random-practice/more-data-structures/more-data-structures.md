@@ -136,7 +136,7 @@
 14. `62-number-of-recent-calls.ipynb` — Number of Recent Calls
 15. `63-reverse-nodes-in-k-group.ipynb` — Reverse Nodes in k-Group `[#neetcode-150]`
 16. `64-flatten-a-multilevel-doubly-linked-list.ipynb` — Flatten a Multilevel Doubly Linked List
-17. `65-design-add-and-search-words-data-structure.ipynb` — Design Add and Search Words Data Structure `[#neetcode-150]`
+17. `65-design-add-and-search-words-data-structure.ipynb` — Design Add and Search Words Data Structure `[#neetcode-150]` DONE
 18. `66-replace-words.ipynb` — Replace Words
 19. `67-map-sum-pairs.ipynb` — Map Sum Pairs
 20. `68-task-scheduler.ipynb` — Task Scheduler `[#neetcode-150]` DONE
