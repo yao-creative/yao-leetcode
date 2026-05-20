@@ -14,27 +14,7 @@ Here's my honest assessment:
 
 ---
 
-## Critical Gaps for Top-Tier (Frontier AI / HFT / Quant)
 
-### 🔴 Missing Entirely (Dealbreakers)
-
-**Graphs** — only `network-delay-time` and `course-schedule` (both in review/to-optimize). No BFS/DFS variants, no topological sort, no union-find, no shortest path beyond Dijkstra basics. Graphs are ~25% of hard interviews at these firms.
-
-**Dynamic Programming depth** — you have `climbing-stairs`, `unique-paths`, `max-subarray` (all DP 101). Missing: knapsack variants, interval DP, DP on trees, bitmask DP, sequence alignment. Jane Street / Two Sigma routinely ask DP-hard.
-
-**Two Pointers / Sliding Window** — only `longest-substring` and `two-sum-II`. Missing: container with most water, trapping rain water, minimum window substring.
-
-**Backtracking** — only `subsets`. Missing: permutations, N-queens, word search, combination sum. These appear constantly at Anthropic/DeepMind/OpenAI-level system design coding screens.
-
-**Monotonic Stack** — `largest-rectangle` is in review, meaning it's shaky. This pattern (next greater element, daily temperatures, stock span) is a dedicated pattern cluster you need cold.
-
-**Heap / Priority Queue advanced** — only `k-th largest in stream` and `top-k frequent`. Missing: merge K sorted lists, find median from data stream, task scheduling variants beyond surface level.
-
-**Binary Search on answer** — `koko-eating-bananas` is in review. Missing: capacity to ship packages, split array largest sum, aggressive cows. This is a signature HFT pattern (optimization under constraints).
-
-**Bit Manipulation** — zero coverage. XOR tricks, bit masking, counting bits. Quant firms love these.
-
-**String algorithms** — no KMP, no Rabin-Karp, no palindrome problems (Manacher's). Relevant for ML infra roles.
 
 ### 🟡 Shallow Coverage (Present but Thin)
 
@@ -94,3 +74,25 @@ Do these in rough order — earlier = higher urgency:
 
 
 
+
+## (WITH SPOILERS) Critical Gaps for Top-Tier (Frontier AI / HFT / Quant)
+
+### 🔴 Missing Entirely (Dealbreakers)
+
+**Graphs** — only `network-delay-time` and `course-schedule` (both in review/to-optimize). No BFS/DFS variants, no topological sort, no union-find, no shortest path beyond Dijkstra basics. Graphs are ~25% of hard interviews at these firms.
+
+**Dynamic Programming depth** — you have `climbing-stairs`, `unique-paths`, `max-subarray` (all DP 101). Missing: knapsack variants, interval DP, DP on trees, bitmask DP, sequence alignment. Jane Street / Two Sigma routinely ask DP-hard.
+
+**Two Pointers / Sliding Window** — only `longest-substring` and `two-sum-II`. Missing: container with most water, trapping rain water, minimum window substring.
+
+**Backtracking** — only `subsets`. Missing: permutations, N-queens, word search, combination sum. These appear constantly at Anthropic/DeepMind/OpenAI-level system design coding screens.
+
+**Monotonic Stack** — `largest-rectangle` is in review, meaning it's shaky. This pattern (next greater element, daily temperatures, stock span) is a dedicated pattern cluster you need cold.
+
+**Heap / Priority Queue advanced** — only `k-th largest in stream` and `top-k frequent`. Missing: merge K sorted lists, find median from data stream, task scheduling variants beyond surface level.
+
+**Binary Search on answer** — `koko-eating-bananas` is in review. Missing: capacity to ship packages, split array largest sum, aggressive cows. This is a signature HFT pattern (optimization under constraints).
+
+**Bit Manipulation** — zero coverage. XOR tricks, bit masking, counting bits. Quant firms love these.
+
+**String algorithms** — no KMP, no Rabin-Karp, no palindrome problems (Manacher's). Relevant for ML infra roles.
