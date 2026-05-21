@@ -609,9 +609,3 @@ Examples:
 | 10       | GPU/distributed ML infrastructure       |
 
 
-
-
-
-
-
-
