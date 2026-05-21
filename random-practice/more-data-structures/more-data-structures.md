@@ -145,7 +145,7 @@
 23. `71-contains-duplicate-iii.ipynb` — Contains Duplicate III
 24. `72-reduce-array-size-to-the-half.ipynb` — Reduce Array Size to The Half
 25. `75-task-scheduler-ii.ipynb` — Task Scheduler II
-26. `76-course-schedule.ipynb` — Course Schedule `[#neetcode-150]`
+26. `76-course-schedule.ipynb` — Course Schedule `[#neetcode-150]` DONE
 27. `77-course-schedule-ii.ipynb` — Course Schedule II `[#neetcode-150]`
 
 ## Bucket Sort Focus (New)

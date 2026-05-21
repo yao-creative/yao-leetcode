@@ -49,17 +49,17 @@ Do these in rough order — earlier = higher urgency:
 6. **Word Search**
 7. **Permutations**
 8. **Rotated Sorted Array Search**
-9. **Single Number** (XOR)
+9. **Single Number** 
 10. **Minimum Window Substring**
 11. **Longest Common Subsequence**
 12. **Linked List Cycle II**
 13. **Pacific Atlantic Water Flow**
 14. **Combination Sum**
-15. **Daily Temperatures** (monotonic stack)
+15. **Daily Temperatures**  DONE
 16. **Capacity to Ship Packages Within D Days**
 17. **Lowest Common Ancestor of a BST**
 18. **Edit Distance**
-19. **Course Schedule II** (topo sort)
+19. **Course Schedule II** 
 20. **Counting Bits**
 21. **Serialize and Deserialize Binary Tree**
 22. **Merge K Sorted Lists**

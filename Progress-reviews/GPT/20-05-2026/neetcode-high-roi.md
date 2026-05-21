@@ -3,7 +3,7 @@ Based on your completed set, these are the **highest ROI missing questions** for
 # Highest ROI Next Questions For You
 
 1. Word Ladder
-2. Alien Dictionary
+2. Alien Dictionary DOING
 3. Reconstruct Itinerary
 4. Clone Graph
 5. Pacific Atlantic Water Flow
@@ -13,7 +13,7 @@ Based on your completed set, these are the **highest ROI missing questions** for
 9. Accounts Merge
 10. Minimum Cost to Connect Points
 11. Sliding Window Maximum
-12. Daily Temperatures
+12. Daily Temperatures DONE
 13. Trapping Rain Water
 14. Car Fleet
 15. Meeting Rooms II

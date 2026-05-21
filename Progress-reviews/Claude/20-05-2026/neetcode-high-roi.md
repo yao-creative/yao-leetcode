@@ -1,6 +1,6 @@
 Based on your done list cross-referenced against NeetCode's roadmap, here are your highest-ROI problems — ordered by how much unlock-power they give you across the most company tiers:
 
-1. Reverse Linked List (too easy skip, just iteration from head to tail)
+1. Reverse Linked List DONE
 2. Trapping Rain Water
 3. Linked List Cycle
 4. Coin Change
@@ -8,13 +8,13 @@ Based on your done list cross-referenced against NeetCode's roadmap, here are yo
 6. Clone Graph
 7. Pacific Atlantic Water Flow
 8. Merge K Sorted Lists
-9. Word Search
+9. Word Search STUCK
 10. Minimum Window Substring
 11. Longest Repeating Character Replacement
 12. Find Median from Data Stream
 13. Permutations
 14. Combination Sum
-15. Daily Temperatures
+15. Daily Temperatures DONE
 16. Lowest Common Ancestor of a Binary Tree
 17. Binary Tree Level Order Traversal
 18. Rotated Sorted Array Search
