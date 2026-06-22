@@ -8,19 +8,19 @@ You start with a system:
 
 * A state space: ( S )
 * A transition relation:
-  [
+  $$
   \rightarrow ;\subseteq S \times S
-  ]
+  $$
 * A computation:
-  [
+  $$
   s_0 \rightarrow s_1 \rightarrow s_2 \rightarrow \cdots
-  ]
+  $$
 
 **Goal (termination):**
 There is no infinite chain:
-[
+$$
 s_0 \rightarrow s_1 \rightarrow s_2 \rightarrow \cdots
-]
+$$
 
 So termination is:
 
@@ -32,18 +32,18 @@ This is already structurally a **well-foundedness claim**.
 
 ## 2. Well-founded principle (the real engine)
 
-A relation ( (W, \prec) ) is **well-founded** iff:
+A relation $ (W, \prec) $ is **well-founded** iff:
 
 > Every non-empty subset of ( W ) has a minimal element
 > or equivalently
 > There is no infinite descending chain:
-> [
+> $$
 > w_0 \succ w_1 \succ w_2 \succ \cdots
-> ]
+> $$
 
 Canonical example:
 
-* ( (\mathbb{N}, <) )
+* $ (\mathbb{N}, <) $
 
 This is the **well-ordering principle backbone** used in termination proofs.
 
@@ -62,7 +62,7 @@ $$
 
 where:
 
-* ( (W, \prec) ) is well-founded
+* $ (W, \prec) $ is well-founded
 
 such that:
 
@@ -232,7 +232,7 @@ Variant functions are equivalent to:
 
 If:
 
-* for all (s), assuming all (s' \prec s) terminate ⇒ (s) terminates
+* for all (s), assuming all $s' \prec s$ terminate ⇒ (s) terminates
 
 then:
 $$
@@ -257,7 +257,7 @@ $$
 A = { s \in S \mid s \text{ does not terminate} }
 $$
 
-If (A \neq \emptyset), pick minimal:
+If $A \neq \emptyset$, pick minimal:
 $$
 s_{\min} = \arg\min V(s)
 $$
