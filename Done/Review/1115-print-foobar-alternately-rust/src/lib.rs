@@ -103,7 +103,6 @@ impl FooBarTrait for FooBar2 {
 }
 
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
