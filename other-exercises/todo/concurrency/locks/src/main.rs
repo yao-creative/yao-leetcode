@@ -9,6 +9,11 @@ pub struct LockTwo{
     victim: AtomicUsize,
 }
 
+pub struct PetersonLock{
+    flags: (AtomicBool, AtomicBool),
+    victim: AtomicUsize,
+}
+
 pub trait CustomLockTrait {
 
     fn lock(&self, i: usize);
@@ -30,9 +35,19 @@ impl LockTwo {
     }
 }
 
+impl PetersonLock {
+    pub fn new() -> Self {
+        flags: (AtomicBool::new(false), AtomicBool::new(false)),
+        victim: AtomicUsize::new(0),
+    }
+}
+
+
 // Mutex <=> | Threads crit section (k) | <= 1 for all k time stamp >= 0.
 // mutex by structural induction on transition prossibilities.
 // intent possibilities. 
+
+// failure case if no one wants to unlock first, but atleast mutex (is safe)
 impl CustomLockTrait for LockOne{ 
     fn lock(&self, i: usize){
         let other = 1 - i; // in the mod 2 space 1 gives xor
@@ -49,6 +64,7 @@ impl CustomLockTrait for LockOne{
             std::hint::spin_loop();
         }
     }
+
     fn unlock(&self, i: usize){
         // set flags to false.
         if i == 0 {
@@ -60,6 +76,7 @@ impl CustomLockTrait for LockOne{
 
 }
 
+// Failure mode when one person goes to lock and has to wait for someone else to lock to be able to start.
 impl CustomLockTrait for LockTwo{
     fn lock(&self, i: usize) {
         let other = 1 - i;
@@ -75,7 +92,30 @@ impl CustomLockTrait for LockTwo{
     fn unlock(&self, i: usize) {
         // Nothing to do for LockTwo, as lock is fully controlled by victim variable
         // Unlock is a no-op
-        
     }
 
+}
+
+impl CustomLockTrait for PetersonLock{
+    fn lock(&self, i: usize) {
+        let other = 1 - i;
+        // Set victim to self
+        self.victim.store(i, Ordering::SeqCst);
+        // giving intent
+        if i == 0 {
+            self.flags.0.store(true, Ordering::SeqCst);
+        } else {
+            self.flags.1.store(true, Ordering::SeqCst);
+        }
+
+        // Interest predicate and priority predicate.
+        while (self.victim.load(Ordering::SeqCst) == i) && (if other == 0 { self.flags.0.load(Ordering::SeqCst) } else { self.flags.1.load(Ordering::SeqCst) }) {
+            std::hint::spin_loop();
+        }
+    }
+
+    fn unlock(&self, i: usize) {
+        // Nothing to do for LockTwo, as lock is fully controlled by victim variable
+        // Unlock is a no-op
+    }
 }
