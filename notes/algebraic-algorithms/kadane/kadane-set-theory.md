@@ -1,4 +1,4 @@
-Yes. The thing you are asking for is the **logical specification first**, before introducing the optimization operator (\max). Then the recursive state can be defined as a **set-theoretic object** (a derived set/function), not as an informal programming variable.
+Yes. The thing you are asking for is the **logical specification first**, before introducing the optimization operator $\max$. Then the recursive state can be defined as a **set-theoretic object** (a derived set/function), not as an informal programming variable.
 
 Let's do it carefully.
 
@@ -8,13 +8,13 @@ Let's do it carefully.
 
 Let:
 
-[
-a:{1,\dots,n}\rightarrow\mathbb R
-]
+$$
+a:\{1,\dots,n\}\to\mathbb{R}
+$$
 
-The answer is a value (m\in\mathbb R) such that:
+The answer is a value ($m\in\mathbb{R}$) such that:
 
-[
+$$
 \boxed{
 \exists i^*,j^*
 \left[
@@ -30,11 +30,11 @@ The answer is a value (m\in\mathbb R) such that:
 \right)
 \right]
 }
-]
+$$
 
 Meaning:
 
-> there exists an interval ((i^*,j^*)) such that every valid interval has sum no larger.
+> there exists an interval $(i^*,j^*)$ such that every valid interval has sum no larger.
 
 ---
 
@@ -42,38 +42,37 @@ Meaning:
 
 Define:
 
-[
-I={1,\dots,n}
-]
+$$
+I=\{1,\dots,n\}
+$$
 
 and:
 
-[
-S=
-{(i,j)\in I\times I\mid i\le j}.
-]
+$$
+S=\{(i,j)\in I\times I\mid i\le j\}.
+$$
 
 The specification becomes:
 
-[
+$$
 \boxed{
 \exists s^*\in S:
 \forall s\in S:
 F(s)\le F(s^*)
 }
-]
+$$
 
 where:
 
-[
-F(i,j)=\sum_{k=i}^{j}a(k)
-]
+$$
+F(i,j)=\sum_{k=i}^{j}a(k).
+$$
 
 ---
 
-# Now derive the recursive state
+## Now derive the recursive state
 
-The key move is **not introducing max**. We introduce an equivalence class of candidates.
+The key move is **not introducing** $\max$. We introduce an equivalence class of candidates.
 
 ---
 
@@ -81,33 +80,31 @@ The key move is **not introducing max**. We introduce an equivalence class of ca
 
 Define:
 
-[
-S_j=
-{(i,j)\in S\mid i\le j}
-]
+$$
+S_j=\{(i,j)\in S\mid i\le j\}.
+$$
 
 This is:
 
-> all contiguous subsequences ending at (j).
+> all contiguous subsequences ending at $j$.
 
 So:
 
-[
-S=
-\bigcup_{j\in I}S_j
-]
+$$
+S=\bigcup_{j\in I}S_j
+$$
 
 and:
 
-[
+$$
 \exists(i,j)\in S
-]
+$$
 
 becomes:
 
-[
-\exists j\in I,\exists(i,j)\in S_j
-]
+$$
+\exists j\in I,\exists(i,j)\in S_j.
+$$
 
 ---
 
@@ -115,36 +112,35 @@ becomes:
 
 Instead of:
 
-[
-B_j=\text{number}
-]
+$$
+B_j\in\mathbb{R}
+$$
 
 define:
 
-[
+$$
 \boxed{
 C_j=
-\left{
+\left\{
 (i,j)\in S_j
 \mid
 \forall(r,j)\in S_j:
 \sum_{k=r}^{j}a(k)
 \le
 \sum_{k=i}^{j}a(k)
-\right}
+\right\}
 }
-]
+$$
 
 Read:
 
-[
-C_j=
-\text{the set of all best intervals ending at }j.
-]
+$$
+C_j=\text{the set of all best intervals ending at }j.
+$$
 
 This is pure set-builder notation.
 
-No max.
+No $\max$.
 
 ---
 
@@ -152,85 +148,77 @@ No max.
 
 Take:
 
-[
-(i,j)\in C_j
-]
+$$
+(i,j)\in C_j.
+$$
 
 There are two cases.
 
 ### Case 1
 
-[
-i=j
-]
+$$
+i=j.
+$$
 
 The interval is:
 
-[
+$$
 (j,j)
-]
+$$
 
 with sum:
 
-[
+$$
 a(j).
-]
+$$
 
 ---
 
 ### Case 2
 
-[
-i<j
-]
+$$
+i<j.
+$$
 
 Then:
 
-[
+$$
 (i,j-1)\in S_{j-1}
-]
+$$
 
 and:
 
-[
-\sum_{k=i}^{j}a(k)
-==================
-
-\sum_{k=i}^{j-1}a(k)+a(j).
-]
+$$
+\sum_{k=i}^{j}a(k)=\sum_{k=i}^{j-1}a(k)+a(j).
+$$
 
 The best predecessor must come from:
 
-[
+$$
 C_{j-1}.
-]
+$$
 
 Therefore the transition is:
 
-[
+$$
 C_j=
 \begin{cases}
-{(j,j)}
-&
-\text{if starting is better}
-\
-{(i,j)\mid(i,j-1)\in C_{j-1}}
-&
-\text{if extending is better}
+\{(j,j)\} & \text{if starting is better} \\
+\{(i,j)\mid (i,j-1)\in C_{j-1}\} & \text{if extending is better}
 \end{cases}
-]
+$$
 
 More formally, the next state is a function:
 
-[
-T_j:\mathcal P(S_{j-1})\rightarrow\mathcal P(S_j)
-]
+$$
+T_j:\mathcal{P}(S_{j-1})\to\mathcal{P}(S_j)
+$$
 
 where:
 
-[
+$$
 C_j=T_j(C_{j-1}).
-]
+$$
 
 ---
 
@@ -238,65 +226,64 @@ C_j=T_j(C_{j-1}).
 
 The normal recurrence:
 
-[
+$$
 b_j=\max(a(j),b_{j-1}+a(j))
-]
+$$
 
 is obtained by applying a projection:
 
-[
-\phi(C_j)=
-\sum_{k=i}^{j}a(k)
-]
+$$
+\phi(C_j)=\sum_{k=i}^{j}a(k)
+$$
 
 for any:
 
-[
+$$
 (i,j)\in C_j.
-]
+$$
 
-Because all members of (C_j) have equal value.
+Because all members of $C_j$ have equal value.
 
 So:
 
-[
+$$
 \boxed{
 b_j=\phi(C_j)
 }
-]
+$$
 
-The "variable" (b_j) is actually a **quotient representation** of the larger set state.
+The "variable" $b_j$ is actually a **quotient representation** of the larger set state.
 
 ---
 
 The hierarchy is:
 
-[
+$$
 \text{all intervals}
-]
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
-[
-S_j={\text{intervals ending at }j}
-]
+$$
+S_j=\{\text{intervals ending at }j\}
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
-[
-C_j={\text{optimal intervals in }S_j}
-]
+$$
+C_j=\{\text{optimal intervals in }S_j\}
+$$
 
-[
+$$
 \downarrow
-]
+$$
 
-[
+$$
 b_j=\text{equivalence class representative value}
-]
+$$
 
 So yes: the recursive state absolutely can be defined in set theory. The usual dynamic-programming notation hides the fact that it is a **derived object obtained by restricting a quantified search space and proving closure under a transition function**.
